@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login</title>
+    <link rel="stylesheet" href="health.css">
+</head>
+<body>
+    <header>
+        <h1>Patient Login</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Our Hospital. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("login-email").value;
+    let password = document.getElementById("login-password").value;
+
+    let storedUser = localStorage.getItem(email);
+    
+    if (storedUser) {
+        let userData = JSON.parse(storedUser);
+        if (userData.password === password) {
+            alert("✅ Logged in successfully!");
+            window.location.href = "index.html"; // Redirect after login
+        } else {
+            alert("❌ Invalid password.");
+        }
+    } else {
+        alert("❌ No account found. Please register first.");
+    }
+});
+
+    </script>
+</body>
+</html>

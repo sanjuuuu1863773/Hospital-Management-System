@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors</title>
+    <link rel="stylesheet" href="health.css">
+</head>
+<body class="doctors-page">
+    
+    <header>
+        <h1 class="page-title">Meet Our Expert Doctors</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="doctors" class="doctors-section">
+        <h2 class="section-title">Our Specialist Team</h2>
+        <div class="doctor-container">
+            <div class="doctor-card" onclick="openBookingForm('Dr. Meera Patel')">
+                <img src="meerupatel.jpg" alt="Dr. Meera Patel">
+                <h3>Dr. Meera Patel</h3>
+                <p>Cardiologist</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Rahul Sharma')">
+                <img src="rahulsharma.jpg" alt="Dr. Rahul Sharma">
+                <h3>Dr. Rahul Sharma</h3>
+                <p>Neurologist</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Arjun Verma')">
+                <img src="arjuverma.jpg" alt="Dr. Arjun Verma">
+                <h3>Dr. Arjun Verma</h3>
+                <p>Orthopedic Surgeon</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Girish Hegde')">
+                <img src="girishhegde.jpg" alt="Dr. Girish Hegde">
+                <h3>Dr. Girish Hegde</h3>
+                <p>Dermatologist</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Veena K')">
+                <img src="veenak.jpg" alt="Dr. Veena K">
+                <h3>Dr. Veena K</h3>
+                <p>ENT Specialist</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Deepak Verma')">
+                <img src="deepakverma.jpg" alt="Dr. Deepak Verma">
+                <h3>Dr. Deepak Verma</h3>
+                <p>Ophthalmologist</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Rajiv Kapoor')">
+                <img src="rajivkapoor.jpg" alt="Dr. Rajiv Kapoor">
+                <h3>Dr. Rajiv Kapoor</h3>
+                <p>Pediatrician</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="doctor-card" onclick="openBookingForm('Dr. Tanya Mehta')">
+                <img src="tanyamehta.jpg" alt="Dr. Tanya Mehta">
+                <h3>Dr. Tanya Mehta</h3>
+                <p>Oncologist</p>
+                <button>Book Appointment</button>
+            </div>
+        </div>
+    </section>
+    <div id="booking-form" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form">
+                <label for="doctor-name">Doctor:</label>
+                <input type="text" id="doctor-name" readonly>
+
+                <label for="patient-name">Your Name:</label>
+                <input type="text" id="patient-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" required>
+
+                <button type="submit">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Our Hospital. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

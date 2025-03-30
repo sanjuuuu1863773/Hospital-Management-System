@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fc;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: yellow;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #ffcc00;
+            color: #003366;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: #e6b800;
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        #about {
+            background: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #about h2 {
+            color: #003366;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        #about img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Services Section */
+        #services {
+            background: #e3f2fd;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-box p {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Our Hospital</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Your Health, Our Priority</h2>
+        <p>Expert Doctors & Advanced Treatments at Your Service</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Our Hospital</h2>
+        <p>We are committed to providing world-class healthcare with state-of-the-art facilities and experienced medical professionals.</p>
+        <img src="hospital.jpg" alt="Hospital Image">
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.o8Tee-F8_Ril90dGotorGQHaE8&pid=Api&P=0&h=180" alt="General Checkup">
+                <p>General Checkup</p>
+            </div>
+            <div class="service-box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.1xRJTt_q9iZ72ER5K3btpAHaC2&pid=Api&P=0&h=180" alt="Emergency Care">
+                <p>Emergency Care</p>
+            </div>
+            <div class="service-box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP._FV0KFiiI5z6NzIRrVSHrAHaFW&pid=Api&P=0&h=180" alt="Specialist Consultation">
+                <p>Specialist Consultation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> 123 Health Street, Mangaluru, Karnataka</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> contact@ourhospital.com</p>
+    </section>
+
+    <!-- Working Hours -->
+    <h3>Working Hours:</h3>
+    <ul>
+        <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
+        <li>Saturday: 10:00 AM - 5:00 PM</li>
+        <li>Sunday: Closed</li>
+    </ul>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Our Hospital. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
